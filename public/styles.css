@@ -1,0 +1,274 @@
+:root {
+  /* Color */
+  --clr-blk: #000000;
+  --clr-pink: #f87171;
+  --clr-blue: #4b4efc;
+
+  /* Font Family */
+  --ff-sans: 'Montserrat', sans-serif;
+}
+
+/* ------------------- */
+/* Reset               */
+/* ------------------- */
+
+/* https://piccalil.li/blog/a-modern-css-reset/ */
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: 400;
+}
+
+/* set up the body */
+body {
+  font-family: var(--ff-sans-normal);
+  font-size: var(--fs-400);
+  background-color: hsl(var(--clr-dark));
+  color: hsl(var(--clr-white));
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+/* make images easier to work with */
+img,
+picutre {
+  max-width: 100%;
+  display: block;
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ------------------- */
+/* General             */
+/* ------------------- */
+
+.text-center {
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.flow > * + * {
+  margin-top: var(--flow-space, 1rem);
+}
+
+.grid {
+  display: grid;
+}
+.top-4 {
+  margin-top: 4em;
+}
+.top-2 {
+  margin-top: 2em;
+}
+
+.top-1 {
+  margin-top: 1em;
+}
+
+.container {
+  margin-inline: auto;
+  max-width: 80rem;
+  font-family: var(--ff-sans);
+  padding: 0 64px;
+}
+
+/* Fonts */
+.ff-sans {
+  font-family: var(--ff-sans);
+}
+
+.fs-500 {
+  font-weight: 500;
+}
+.fs-400 {
+  font-weight: 400;
+}
+.fs-600 {
+  font-weight: 600;
+}
+
+/* Text Color */
+.text-blue {
+  color: #4b4efc;
+}
+
+.text-black {
+  color: #000000;
+}
+
+.text-pink {
+  color: #f87171;
+}
+
+.bg-white {
+  background-color: white;
+}
+/* ------------------- */
+/* Other               */
+/* ------------------- */
+
+.button {
+  border: black 4px solid;
+  font-weight: 600;
+  margin-inline: 10px;
+  margin-top: 8px;
+  font-family: var(--ff-sans);
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: #f87171;
+  color: #000000;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+}
+
+.icon {
+  width: 64px;
+}
+
+.nav-item:after {
+  content: '';
+  display: block;
+  height: 1px;
+  width: 0;
+  background: transparent;
+  transition: width 0.5s ease, background-color 0.5s ease;
+}
+
+.nav-item:hover:after {
+  width: 100%;
+  background: #f87171;
+}
+
+.heading-wrap {
+  margin-top: 2em;
+  margin-bottom: 6em;
+}
+
+.heading {
+  text-align: center;
+  font-size: 5.25em;
+}
+
+.about-left {
+  row-gap: 0;
+}
+
+.love-icon {
+  width: 3.5em;
+  position: relative;
+  left: 75%;
+}
+
+.about-wrap {
+  margin: 3em 0;
+}
+
+.profile-pic {
+  width: 310px;
+  border: black solid 4px;
+  float: right;
+  text-align: center;
+}
+
+.resume {
+  font-size: 24px;
+  height: 2em;
+  width: 8em;
+  text-align: center;
+  color: gray;
+  padding: 4px;
+  margin: auto 0 0;
+}
+
+.mail-icon {
+  width: 24px;
+  display: inline-block;
+  position: relative;
+  bottom: 2px;
+}
+
+.mail-button {
+  font-size: 24px;
+  height: 2em;
+  width: 8em;
+  text-align: center;
+  color: gray;
+  padding: 8px;
+  margin: auto 0 0;
+}
+
+.footer {
+  margin: 6em 0 2em 0;
+}
+
+@media screen and (max-width: 576px) {
+  .heading {
+    font-size: 40px;
+  }
+
+  .love-icon {
+    width: 28px;
+    position: relative;
+    left: 400px;
+  }
+
+  .profile-pic {
+    display: none;
+  }
+
+  .about-left {
+    text-align: center;
+  }
+
+  .resume {
+    margin: auto;
+  }
+}
