@@ -89,6 +89,10 @@ select {
   text-align: center;
 }
 
+.text-right {
+  text-align: right;
+}
+
 .flex {
   display: flex;
 }
@@ -218,6 +222,18 @@ select {
   text-align: center;
 }
 
+.project-pic-right {
+  width: 310px;
+  border: black solid 4px;
+  float: right;
+}
+
+.project-pic-left {
+  width: 310px;
+  border: black solid 4px;
+  float: left;
+}
+
 .resume {
   font-size: 24px;
   height: 2em;
@@ -236,7 +252,7 @@ select {
 }
 
 .mail-button {
-  font-size: 24px;
+  font-size: 22px;
   height: 2em;
   width: 8em;
   text-align: center;
@@ -249,9 +265,11 @@ select {
   margin: 6em 0 2em 0;
 }
 
+/* For Mobile */
+
 @media screen and (max-width: 576px) {
   .heading {
-    font-size: 40px;
+    font-size: 36px;
   }
 
   .love-icon {
@@ -260,15 +278,43 @@ select {
     left: 400px;
   }
 
-  .profile-pic {
-    display: none;
+  .about-left {
+    order: 2;
+    text-align: center;
   }
 
-  .about-left {
-    text-align: center;
+  .profile-pic {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    float: none;
+  }
+
+  .about-heading,
+  .bio {
+    margin-top: 1em;
+  }
+
+  .resume {
+    position: relative;
+    top: 16px;
+    font-size: 22px;
+  }
+
+  .about-right {
+    order: 1;
   }
 
   .resume {
     margin: auto;
+  }
+
+  .navbar-brand {
+    width: 48px;
+  }
+
+  .mail-button {
+    font-size: 22px;
   }
 }
