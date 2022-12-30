@@ -265,6 +265,17 @@ select {
   margin: 6em 0 2em 0;
 }
 
+.visit-work {
+  align-self: flex-end;
+  font-size: 20px;
+  height: 2em;
+  width: 8em;
+  text-align: center;
+  color: gray;
+  padding: 5px 10px;
+  margin: 10px 0;
+}
+
 /* For Mobile */
 
 @media screen and (max-width: 576px) {
@@ -316,5 +327,50 @@ select {
 
   .mail-button {
     font-size: 22px;
+  }
+
+  .description {
+    order: 2;
+    font-size: 12px;
+    text-align: left;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  h5 {
+    font-size: 14px;
+  }
+
+  .project-pic {
+    order: 1;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 960px) {
+  .heading {
+    font-size: 42px;
+  }
+
+  .love-icon {
+    width: 28px;
+    position: relative;
+    left: 600px;
+  }
+
+  .about-heading,
+  .bio,
+  .resume {
+    margin-top: 1em;
+  }
+
+  .about-right {
+    display: flex;
+    align-items: center;
+  }
+
+  .profile-pic {
+    width: 700px;
   }
 }
