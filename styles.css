@@ -56,7 +56,7 @@ body {
 
 /* make images easier to work with */
 img,
-picutre {
+picture {
   max-width: 100%;
   display: block;
 }
@@ -116,10 +116,7 @@ select {
 }
 
 .container {
-  margin-inline: auto;
-  max-width: 80rem;
   font-family: var(--ff-sans);
-  padding: 0 64px;
 }
 
 /* Fonts */
@@ -193,16 +190,12 @@ select {
 
 .heading-wrap {
   margin-top: 2em;
-  margin-bottom: 6em;
+  margin-bottom: 11em;
 }
 
 .heading {
   text-align: center;
   font-size: 5.25em;
-}
-
-.about-left {
-  row-gap: 0;
 }
 
 .love-icon {
@@ -212,7 +205,7 @@ select {
 }
 
 .about-wrap {
-  margin: 3em 0;
+  margin: 1em 0;
 }
 
 .profile-pic {
@@ -276,22 +269,53 @@ select {
   margin: 0;
 }
 
+.profile-description {
+  display: grid;
+  text-align: center;
+  align-items: end;
+  margin: 1em 0;
+}
+
+.aside {
+  padding: 2em;
+}
+
+.main-title {
+  padding: 1em;
+}
+
+.content {
+  display: flex;
+}
+
+#contact-section {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 2em;
+}
+
 /* For Mobile */
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 700px) {
   .heading {
-    font-size: 36px;
+    font-size: 32px;
+  }
+
+  .heading-wrap {
+    margin: 2em 0 2em;
   }
 
   .love-icon {
     width: 28px;
-    position: relative;
-    left: 400px;
   }
 
   .about-left {
     order: 2;
     text-align: center;
+  }
+
+  .content {
+    display: grid;
   }
 
   .profile-pic {
@@ -352,9 +376,13 @@ select {
   }
 }
 
-@media (min-width: 576px) and (max-width: 960px) {
+/* @media screen and (max-width: 960px) {
   .heading {
     font-size: 42px;
+  }
+
+  .content {
+    display: grid;
   }
 
   .love-icon {
@@ -369,12 +397,7 @@ select {
     margin-top: 1em;
   }
 
-  .about-right {
-    display: flex;
-    align-items: center;
-  }
-
   .profile-pic {
     width: 700px;
   }
-}
+} */
