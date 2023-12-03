@@ -204,8 +204,34 @@ select {
   left: 75%;
 }
 
+.one-third {
+  width: 33%;
+}
+
+.gallery-img {
+  border-radius: 8px;
+  padding: 4px 0;
+  max-height: 480px;
+  filter: brightness(0.75); /* Default brightness */
+  transition: filter 0.3s ease;
+}
+
+.gallery-img:hover {
+  filter: brightness(1); /* Increase the value for more brightness on hover */
+}
+
+.gallery-img-stand {
+  border-radius: 8px;
+  padding: 4px 0;
+  height: 100%;
+}
+
 .about-wrap {
   margin: 1em 0;
+}
+
+.container-gallery {
+  margin-top: 124px;
 }
 
 .profile-pic {
@@ -318,11 +344,101 @@ select {
 .showcase:nth-child(4) {
   transition-delay: 500ms;
 }
+
+/* Animation */
+
+.animation-container {
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+
+.string {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  animation: move 4s infinite;
+}
+
+.greeting {
+  position: relative;
+  top: 12vmin;
+  animation: white-out 5s infinite;
+}
+
+.closure::after {
+  content: '';
+  position: absolute;
+  height: 26vmin;
+  width: 55vmin;
+  background: white;
+  transform: translate(-60vmin, -26.5vmin);
+}
+
+.closure::before {
+  content: '';
+  position: absolute;
+  height: 25vmin;
+  width: 55vmin;
+  background: white;
+  transform: translate(-50vmin, 8vmin);
+}
+
+.en {
+  color: #fa8231;
+}
+
+.es {
+  color: var(--clr-blue);
+}
+
+.de {
+  color: #c678dd;
+}
+
+.it {
+  color: #a9b0bd;
+}
+
+@keyframes move {
+  25% {
+    transform: translatey(-8vmin);
+    opacity: 1;
+  }
+  50% {
+    transform: translatey(-16vmin);
+  }
+  75% {
+    transform: translatey(-24.5vmin);
+  }
+}
+
+.job-desc {
+  text-align: center;
+  padding: 24px;
+}
+
+.job-desc img {
+  margin: auto;
+  width: 48px;
+}
+
 /* For Mobile */
 
 @media screen and (max-width: 700px) {
   .heading {
     font-size: 32px;
+  }
+
+  .animation-container {
+    height: 28vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    margin-top: 48px;
   }
 
   .heading-wrap {
@@ -339,6 +455,10 @@ select {
   }
 
   .content {
+    display: grid;
+  }
+
+  .gallery {
     display: grid;
   }
 
