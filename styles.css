@@ -518,6 +518,10 @@ select {
   .visit-work {
     font-size: 14px;
   }
+
+  .card .row {
+    display: grid;
+  }
 }
 
 /* @media screen and (max-width: 960px) {
